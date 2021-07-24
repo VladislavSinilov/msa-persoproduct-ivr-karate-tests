@@ -1,0 +1,2 @@
+karate/ivrservice/IvrAdapterRunner.java
+ karate.ivrservice.IvrAdapterRunner

@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tns:GetPersoproductRequestIVR xsi:schemaLocation="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1 PersoproductIVRReqA.xsd" xmlns:tns="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <tns:EBMHeader>
+            <tns:EBMID>9b19a25-0ad9-4456-af62-f7b065c82e21</tns:EBMID>
+            <tns:CreationDateTime>2001-12-17T09:30:47Z</tns:CreationDateTime>
+            <tns:RequestEBMID>111</tns:RequestEBMID>
+            <tns:Sender>
+               <tns:ID>IVR</tns:ID>
+               <tns:Custom>
+                  <tns:UserLogin>123456</tns:UserLogin>
+               </tns:Custom>
+            </tns:Sender>
+         </tns:EBMHeader>
+         <tns:DataArea>
+            <tns:CardNumber>42722907899988888</tns:CardNumber>
+            <tns:ExpirationDate>2020-10-03T09:30:47Z</tns:ExpirationDate>
+            <tns:InventoryNumber>112233</tns:InventoryNumber>
+         </tns:DataArea>
+      </tns:GetPersoproductRequestIVR>
+   </soapenv:Body>
+</soapenv:Envelope>

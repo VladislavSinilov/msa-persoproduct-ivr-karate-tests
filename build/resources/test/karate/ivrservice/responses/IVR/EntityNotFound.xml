@@ -1,0 +1,14 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <GetPersoproductResponseIVR xmlns="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1">
+         <EBMHeader>
+            <EBMID>89b19a25-0ad9-4456-af62-f7b065c82e55</EBMID>
+            <CreationDateTime>2001-12-17T06:25:22Z</CreationDateTime>
+            <Sender/>
+         </EBMHeader>
+         <DataArea>
+            <PersoproductInfo/>
+         </DataArea>
+      </GetPersoproductResponseIVR>
+   </soap:Body>
+</soap:Envelope>

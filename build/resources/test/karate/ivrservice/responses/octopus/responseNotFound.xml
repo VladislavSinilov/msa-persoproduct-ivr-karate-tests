@@ -1,0 +1,14 @@
+<Response-OctopusEntityInfoList xmlns:oraxsl="http://www.oracle.com/XSL/Transform/java"
+                                xmlns:oracle-xsl-mapper="http://www.oracle.com/xsl/mapper/schemas"
+                                xmlns:ns0="urn:vtb24-logistics-service.octopus.pronit.ru"
+                                xmlns="urn:vtb24-logistics-service.octopus.pronit.ru"
+                                xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <ns0:ElementBox>
+        <ns0:EntityType>1</ns0:EntityType>
+        <ns0:EntityID>4272290789998889156454</ns0:EntityID>
+        <ns0:EntityDate>10/20</ns0:EntityDate>
+        <ns0:EntityTaskID>112233</ns0:EntityTaskID>
+        <ns0:ResultCode>1</ns0:ResultCode>
+        <ns0:ErrorString>Сущность не найдена</ns0:ErrorString>
+    </ns0:ElementBox>
+</Response-OctopusEntityInfoList>

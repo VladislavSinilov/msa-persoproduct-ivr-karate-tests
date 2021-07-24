@@ -1,0 +1,43 @@
+{
+  "header": {
+    "messageId": "89b19a25-0ad9-4456-af62-f7b065c82e21",
+    "messageDate": "2001-12-17T06:25:22Z"
+  },
+  "statusMessage": {
+    "code": "0",
+    "text": "Отсутствует код обработки"
+  },
+  "elementBox": [
+    {
+      "entityType": "cm.PersoproductType.BankCard",
+      "entityId": "42722907899988888",
+      "entityDate": "10/20",
+      "entityTaskId": "112233",
+      "issuerType": "cm.BankCardReissueReason.COMPROMAT",
+      "stageCode": "cm.PersoproductShipmentStatus.250",
+      "stageCodeText": "Персопродукт получен/принят в ТП",
+      "stageDate": "2020-01-01T00:00:00+03:00",
+      "embossName": "CARDHOLDER",
+      "salaryCode": "305",
+      "salaryName": "SUPER_PUPER_ZP",
+      "deliveryStageDate": "2019-07-29T00:00:00+03:00",
+      "orderFromReal": "1353",
+      "boxId": "9991",
+      "deliveryCode": "1353",
+      "deliveryPointType": "cm.DeliveryPointType.1",
+      "customerCode": "5959",
+      "planDeliveryDate": "2019-07-29T00:00:00+03:00",
+      "originSystemTypeCode": "cm.SystemInstance.WAY4",
+      "clientId": 978,
+      "pin": 1,
+      "pinBlock": {
+        "type": "cm.PinCoverType.Real",
+        "pinStageCode": "cm.PersoproductShipmentStatus.250",
+        "stageDate": "2020-02-28T16:33:26+03:00",
+        "stageStatus": "Персопродукт получен/принят в ТП",
+        "deliveryStageDate": "2019-07-29T00:00:00+03:00"
+      },
+      "resultCode": "0"
+    }
+  ]
+}

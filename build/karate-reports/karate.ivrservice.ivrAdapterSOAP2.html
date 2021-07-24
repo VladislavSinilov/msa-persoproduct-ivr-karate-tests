@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>karate.ivrservice.ivrAdapterSOAP2</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2021-04-24 04:51:15 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:8]"><span>[1:8]</span> <span>Get a Persoproduct Without Pin</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">karate/ivrservice/ivrAdapterSOAP2.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Tests for IVR adapter</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:8]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:8]</span>
+                <span class="scenario-name">Get a Persoproduct Without Pin</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>581</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/soa-infra/services/ivr/PersoproductIVRReqA/V1/GetPersoproduct&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request read(&#39;request/IVR/goodIVR88.xml&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">27</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>soap action &#39;GetPersoproduct&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">528</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">16:51:15.500 request:
+1 &gt; POST http://localhost:8080/soa-infra/services/ivr/PersoproductIVRReqA/V1/GetPersoproduct
+1 &gt; SOAPAction: GetPersoproduct
+1 &gt; Content-Type: text/xml; charset=UTF-8
+1 &gt; Content-Length: 1316
+1 &gt; Host: localhost:8080
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:v1=&quot;http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1&quot;&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;tns:GetPersoproductRequestIVR xmlns:tns=&quot;http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1 PersoproductIVRReqA.xsd&quot;&gt;
+         &lt;tns:EBMHeader&gt;
+            &lt;tns:EBMID&gt;9b19a25-0ad9-4456-af62-f7b065c82e21&lt;/tns:EBMID&gt;
+            &lt;tns:CreationDateTime&gt;2001-12-17T09:30:47Z&lt;/tns:CreationDateTime&gt;
+            &lt;tns:RequestEBMID&gt;111&lt;/tns:RequestEBMID&gt;
+            &lt;tns:Sender&gt;
+               &lt;tns:ID&gt;IVR&lt;/tns:ID&gt;
+               &lt;tns:Custom&gt;
+                  &lt;tns:UserLogin&gt;123456&lt;/tns:UserLogin&gt;
+               &lt;/tns:Custom&gt;
+            &lt;/tns:Sender&gt;
+         &lt;/tns:EBMHeader&gt;
+         &lt;tns:DataArea&gt;
+            &lt;tns:CardNumber&gt;42722907899988888&lt;/tns:CardNumber&gt;
+            &lt;tns:ExpirationDate&gt;2020-10-03T09:30:47Z&lt;/tns:ExpirationDate&gt;
+            &lt;tns:InventoryNumber&gt;112233&lt;/tns:InventoryNumber&gt;
+         &lt;/tns:DataArea&gt;
+      &lt;/tns:GetPersoproductRequestIVR&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+16:51:15.781 response time in milliseconds: 278
+1 &lt; 200
+1 &lt; Content-Type: text/xml;charset=UTF-8
+1 &lt; Content-Length: 841
+1 &lt; Date: Sat, 24 Apr 2021 13:51:15 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soap:Body&gt;&lt;GetPersoproductResponseIVR xmlns=&quot;http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1&quot;&gt;&lt;EBMHeader&gt;&lt;EBMID&gt;9b19a25-0ad9-4456-af62-f7b065c82e21&lt;/EBMID&gt;&lt;CreationDateTime&gt;2001-12-17T09:30:47Z&lt;/CreationDateTime&gt;&lt;Sender/&gt;&lt;/EBMHeader&gt;&lt;DataArea&gt;&lt;PersoproductInfo&gt;&lt;CardShipmentInfo&gt;&lt;LogisticsCardStatus&gt;250&lt;/LogisticsCardStatus&gt;&lt;DeliveryPointCode&gt;1353&lt;/DeliveryPointCode&gt;&lt;CardDeliveryDate&gt;2019-07-29T00:00:00+03:00&lt;/CardDeliveryDate&gt;&lt;CardNumber&gt;42722907899988888&lt;/CardNumber&gt;&lt;ExpirationDate&gt;2020-10-31T00:00:00+03:00&lt;/ExpirationDate&gt;&lt;InventoryNumber&gt;112233&lt;/InventoryNumber&gt;&lt;DeliveryPointType&gt;Виртуальная&lt;/DeliveryPointType&gt;&lt;/CardShipmentInfo&gt;&lt;/PersoproductInfo&gt;&lt;/DataArea&gt;&lt;/GetPersoproductResponseIVR&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == read(&#39;responses/IVR/RespIVRWithoutPin.xml&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">11</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response /Envelope/Body/GetPersoproductResponseIVR/EBMHeader/EBMID ==&#39;9b19a25-0ad9-4456-af62-f7b065c82e21&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

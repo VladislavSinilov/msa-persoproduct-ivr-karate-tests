@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ivr="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.vtb24.ru/ApplicationConnectorServiceLibrary/IVR/Requesters/PersoproductIVRReqA/V1" xmlns:ns="http://www.vtb24.ru/ApplicationConnectorServiceLibrary/IVR/Requesters/PersoproductIVRReqA/V1" name="PersoproductIVRReqA" targetNamespace="http://www.vtb24.ru/ApplicationConnectorServiceLibrary/IVR/Requesters/PersoproductIVRReqA/V1">
+    <wsdl:types>
+        <xs:schema>
+            <xs:import namespace="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1" schemaLocation="../../../../../ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1/PersoproductIVRReqA.xsd"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="GetPersoproductReqMsg">
+        <wsdl:part name="GetPersoproduct" element="ivr:GetPersoproductRequestIVR"/>
+    </wsdl:message>
+    <wsdl:message name="GetPersoproductRespMsg">
+        <wsdl:part name="GetPersoproduct" element="ivr:GetPersoproductResponseIVR"/>
+    </wsdl:message>
+    <wsdl:portType name="GetPersoproduct">
+        <wsdl:operation name="GetPersoproduct">
+            <wsdl:input message="tns:GetPersoproductReqMsg"/>
+            <wsdl:output message="tns:GetPersoproductRespMsg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="GetPersoproductBinding" type="ns:GetPersoproduct">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetPersoproduct">
+            <soap:operation style="document" soapAction="GetPersoproduct"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="GetPersoproduct_ep">
+        <wsdl:port name="GetPersoproduct_pt" binding="ns:GetPersoproductBinding">
+            <soap:address location="http://ulbs21-sales-app01.neoflex.ru:8001/soa-infra/services/ivr/PersoproductIVRReqAV1/GetPersoproduct"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

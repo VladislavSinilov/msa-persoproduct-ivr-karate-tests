@@ -1,0 +1,24 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <GetPersoproductResponseIVR xmlns="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1">
+         <EBMHeader>
+            <EBMID>9b19a25-0ad9-4456-af62-f7b065c82e21</EBMID>
+            <CreationDateTime>2001-12-17T09:30:47Z</CreationDateTime>
+            <Sender/>
+         </EBMHeader>
+         <DataArea>
+            <PersoproductInfo>
+               <CardShipmentInfo>
+                  <LogisticsCardStatus>250</LogisticsCardStatus>
+                  <DeliveryPointCode>1353</DeliveryPointCode>
+                  <CardDeliveryDate>2019-07-29T00:00:00+03:00</CardDeliveryDate>
+                  <CardNumber>42722907899988888</CardNumber>
+                  <ExpirationDate>2020-10-31T00:00:00+03:00</ExpirationDate>
+                  <InventoryNumber>112233</InventoryNumber>
+                  <DeliveryPointType>Виртуальная</DeliveryPointType>
+               </CardShipmentInfo>
+            </PersoproductInfo>
+         </DataArea>
+      </GetPersoproductResponseIVR>
+   </soap:Body>
+</soap:Envelope>

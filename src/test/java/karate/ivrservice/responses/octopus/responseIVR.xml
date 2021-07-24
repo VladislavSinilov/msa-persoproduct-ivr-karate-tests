@@ -1,0 +1,39 @@
+<Response-OctopusEntityInfoList xmlns:oraxsl="http://www.oracle.com/XSL/Transform/java"
+                                xmlns:oracle-xsl-mapper="http://www.oracle.com/xsl/mapper/schemas"
+                                xmlns:ns0="urn:vtb24-logistics-service.octopus.pronit.ru"
+                                xmlns="urn:vtb24-logistics-service.octopus.pronit.ru"
+                                xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <ns0:ElementBox>
+        <ns0:EntityType>1</ns0:EntityType>
+        <ns0:EntityID>42722907899988888</ns0:EntityID>
+        <ns0:EntityDate>10/20</ns0:EntityDate>
+        <ns0:EntityTaskID>112233</ns0:EntityTaskID>
+        <ns0:OrderFromReal>1353</ns0:OrderFromReal>
+        <ns0:IssuerType>CO</ns0:IssuerType>
+        <ns0:StageCode>250</ns0:StageCode>
+        <ns0:StageCodeText>Персопродукт получен/принят в ТП</ns0:StageCodeText>
+        <ns0:StageDate>2020-01-01T00:00:00.000+03:00</ns0:StageDate>
+        <ns0:EmbossName>CARDHOLDER</ns0:EmbossName>
+        <ns0:SalaryCode>305</ns0:SalaryCode>
+        <ns0:SalaryName>SUPER_PUPER_ZP</ns0:SalaryName>
+        <ns0:DeliveryStageDate>2019-07-29T00:00:00.000+03:00</ns0:DeliveryStageDate>
+        <ns0:DeliveryCode>1353</ns0:DeliveryCode>
+        <ns0:DeliveryPointType>1</ns0:DeliveryPointType>
+        <ns0:PlanDeliveryDate>2019-07-29T00:00:00.000+03:00</ns0:PlanDeliveryDate>
+        <ns0:CustomerCode>5959</ns0:CustomerCode>
+        <ns0:ClientID>978</ns0:ClientID>
+        <ns0:BoxID>9991</ns0:BoxID>
+        <ns0:FirstNameCyr>CARDHOLDER</ns0:FirstNameCyr>
+        <ns0:Pin>0</ns0:Pin>
+        <ns0:OriginSystemTypeCode>0</ns0:OriginSystemTypeCode>
+        <ns0:PinBlock>
+            <ns0:Type>1</ns0:Type>
+            <ns0:PinStageCode>250</ns0:PinStageCode>
+            <ns0:StageDate>2020-02-28T16:33:26.000+03:00</ns0:StageDate>
+            <ns0:StageStatus>Персопродукт получен/принят в ТП</ns0:StageStatus>
+            <ns0:DeliveryStageDate>2019-07-29T00:00:00.000+03:00</ns0:DeliveryStageDate>
+            <ns0:DeliveryPointType>1</ns0:DeliveryPointType>
+        </ns0:PinBlock>
+        <ns0:ResultCode>0</ns0:ResultCode>
+    </ns0:ElementBox>
+</Response-OctopusEntityInfoList>

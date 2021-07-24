@@ -1,0 +1,20 @@
+{
+  "header": {
+    "contactName": "123456",
+    "systemFrom": "IVR",
+    "systemTo": "",
+    "messageId": "89b19a25-0ad9-4456-af62-f7b065c82e21",
+    "creationDateTime": "2001-12-17T06:25:22Z"
+  },
+  "body": {
+    "tabNum": "1",
+    "listData": [
+      {
+        "entityType": "cm.PersoproductType.BankCard",
+        "entityId": "42722907899988888999999999",
+        "entityDate": "10/24",
+        "entityTaskId": "112233"
+      }
+    ]
+  }
+}

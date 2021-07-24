@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1" targetNamespace="http://www.vtb24.ru/ApplicationObjectLibrary/IVR/schemas/PersoproductIVRReqA/V1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="GetPersoproductRequestIVR" type="tns:GetPersoproductRequestType">
+        <xs:annotation>
+            <xs:documentation>Запрос получения логистических данных карты</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="GetPersoproductResponseIVR" type="tns:GetPersoproductResponseType">
+        <xs:annotation>
+            <xs:documentation>Запрос получения логистических данных карты</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GetPersoproductResponseType">
+        <xs:annotation>
+            <xs:documentation>Ответ на запрос получения логистических данных карты</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="EBMHeader" type="tns:EBMHeaderType"/>
+            <xs:element name="DataArea" type="tns:GetPersoproductResponseDataAreaType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GetPersoproductRequestType">
+        <xs:annotation>
+            <xs:documentation>Запрос получения логистических данных карты</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="EBMHeader" type="tns:EBMHeaderType"/>
+            <xs:element name="DataArea" type="tns:GetPersoproductRequestDataAreaType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EBMHeaderType">
+        <xs:sequence>
+            <xs:element name="EBMID" type="xs:string" minOccurs="0"/>
+            <xs:element name="EBMName" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="CreationDateTime" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="RequestEBMID" type="xs:string" minOccurs="0"/>
+            <xs:element name="FaultNotification" type="tns:FaultNotificationType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Sender" type="tns:SenderType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SenderType">
+        <xs:sequence>
+            <xs:element name="ID" type="xs:string" minOccurs="0"/>
+            <xs:element name="Custom" type="tns:CustomSenderType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CustomSenderType">
+        <xs:sequence>
+            <xs:element name="UserLogin" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GetPersoproductRequestDataAreaType">
+        <xs:sequence>
+            <xs:element name="CardNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ExpirationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Срок действия карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="InventoryNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер описи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GetPersoproductResponseDataAreaType">
+        <xs:sequence>
+            <xs:element name="PersoproductInfo" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="CardShipmentInfo" type="tns:CardShipmentInfo"/>
+                        <xs:element name="EnvelopeShipmentInfo" type="tns:EnvelopeShipmentInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CardShipmentInfo">
+        <xs:sequence>
+            <xs:element name="LogisticsCardStatus" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Статус логистики карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DeliveryPointCode" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Код точки доставки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="CardDeliveryDate" type="xs:dateTime" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Срок доставки карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="CardNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ExpirationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Срок действия карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="InventoryNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер описи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DeliveryPointType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Тип точки доставки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EnvelopeShipmentInfo">
+        <xs:sequence>
+            <xs:element name="LogisticsPINEnvelopeStatus" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Статус логистики ПИН конверта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DeliveryPointCode" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Код точки доставки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="HasPINEnvelope" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Признак наличия ПИН-конверта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="HasVirtualPIN" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Признак наличия виртуального ПИН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="PINEnvelopeDeliveryDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Срок доставки ПИН-конверта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="CardNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ExpirationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Срок действия карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="InventoryNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер описи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FaultMessageType">
+        <xs:sequence>
+            <xs:element name="Code" type="xs:int" minOccurs="0"/>
+            <xs:element name="Text" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Severity" type="xs:string" minOccurs="0"/>
+            <xs:element name="Stack" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ApplicationFaultData" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FaultNotificationType">
+        <xs:sequence>
+            <xs:element name="BusinessComponentID" type="xs:string" minOccurs="0"/>
+            <xs:element name="ReportingDateTime" type="xs:string" minOccurs="0"/>
+            <xs:element name="CorrectiveAction" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="FaultMessage" type="tns:FaultMessageType" minOccurs="0"/>
+            <xs:element name="FaultingService" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

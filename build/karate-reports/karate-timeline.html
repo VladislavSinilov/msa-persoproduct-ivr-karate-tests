@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"Test worker","id":1}];
+var items = [{"id":1,"group":1,"content":"karate\/ivrservice\/ivrAdapter[1:8]","start":1621411820472,"end":1621411821867,"title":"karate\/ivrservice\/ivrAdapter[1:8] 11:10:20.472-11:10:21.867 Get a Persoproduct Without Pin"},{"id":2,"group":1,"content":"karate\/ivrservice\/ivrAdapter[2:18]","start":1621411821872,"end":1621411821982,"title":"karate\/ivrservice\/ivrAdapter[2:18] 11:10:21.872-11:10:21.982 Get a Persoproduct With RealPinCover"},{"id":3,"group":1,"content":"karate\/ivrservice\/ivrAdapter[3:28]","start":1621411821987,"end":1621411822097,"title":"karate\/ivrservice\/ivrAdapter[3:28] 11:10:21.987-11:10:22.097 Get a Persoproduct With VirtualPinCover"},{"id":4,"group":1,"content":"karate\/ivrservice\/ivrAdapter[4:48]","start":1621411822102,"end":1621411822173,"title":"karate\/ivrservice\/ivrAdapter[4:48] 11:10:22.102-11:10:22.173 Entity Not Found"},{"id":5,"group":1,"content":"karate\/ivrservice\/getService-mock[1:7]","start":1621411819524,"end":1621411819638,"title":"karate\/ivrservice\/getService-mock[1:7] 11:10:19.524-11:10:19.638 pathMatches('PersoproductGet') && bodyPath('$.body.listData[0].entityId') ==\"42722907899988888\" && methodIs('POST')"},{"id":6,"group":1,"content":"karate\/ivrservice\/getService-mock[2:12]","start":1621411819650,"end":1621411819660,"title":"karate\/ivrservice\/getService-mock[2:12] 11:10:19.650-11:10:19.660 pathMatches('PersoproductGet') && bodyPath('$.body.listData[0].entityId') ==\"42722907899988890\" && methodIs('POST')"},{"id":7,"group":1,"content":"karate\/ivrservice\/getService-mock[3:16]","start":1621411819667,"end":1621411819675,"title":"karate\/ivrservice\/getService-mock[3:16] 11:10:19.667-11:10:19.675 pathMatches('PersoproductGet') && bodyPath('$.body.listData[0].entityId') ==\"42722907899988891\" && methodIs('POST')"},{"id":8,"group":1,"content":"karate\/ivrservice\/getService-mock[4:21]","start":1621411819681,"end":1621411819689,"title":"karate\/ivrservice\/getService-mock[4:21] 11:10:19.681-11:10:19.689 pathMatches('PersoproductGet') && bodyPath('$.body.listData[0].entityId') ==\"4272290789998889156454\" && methodIs('POST')"},{"id":9,"group":1,"content":"karate\/ivrservice\/getService-mock[5:26]","start":1621411819697,"end":1621411819699,"title":"karate\/ivrservice\/getService-mock[5:26] 11:10:19.697-11:10:19.699 AlternativeGet"},{"id":10,"group":1,"content":"karate\/ivrservice\/octopus-mock[1:6]","start":1621411822357,"end":1621411822369,"title":"karate\/ivrservice\/octopus-mock[1:6] 11:10:22.357-11:10:22.369 pathMatches('\/soap-api\/services\/octopus')"},{"id":11,"group":1,"content":"karate\/ivrservice\/octopus-mock[2:10]","start":1621411822374,"end":1621411822374,"title":"karate\/ivrservice\/octopus-mock[2:10] 11:10:22.374-11:10:22.374 AlternativeOctopus"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
